@@ -16,8 +16,8 @@ router.post(
   "/",
   [
     check("name", "Name is required").not().isEmpty(),
-    check("email", "Include a valid email").isEmail(),
-    check("password", "Enter a Password with 6 or moe characters").isLength({
+    check("email", "Please include a valid email").isEmail(),
+    check("password", "Enter a Password with 6 or more characters").isLength({
       min: 6,
     }),
   ],
