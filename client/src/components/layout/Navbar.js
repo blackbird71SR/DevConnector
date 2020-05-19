@@ -9,7 +9,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <ul>
       <li>
         <a onClick={logout} href="#!">
-          <i className="fas fas-sign-out-alt"></i>
+          <i className="fa fa-sign-out-alt"></i>
           {"  "}
           <span className="hide-sm">Logout</span>
         </a>
@@ -35,7 +35,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <nav className="navbar bg-dark">
       <h1>
         <Link to="/">
-          <i className="fas fa-code"></i> DevConnector
+          <i className="fa fa-code"></i> DevConnector
         </Link>
       </h1>
       {!loading && (
