@@ -130,7 +130,7 @@ export const deleteEducation = (id) => async (dispatch) => {
 export const deleteAccount = () => async (dispatch) => {
   if (window.confirm("Are you sure? This can not be undone!")) {
     try {
-      await axios.iddelete(`/api/profile/`);
+      await axios.delete(`/api/profile`);
       dispatch({ type: CLEAR_PROFILE });
       dispatch({ type: ACCOUNT_DELETED });
       dispatch(setAlert("Your acciunt has been permanatly Deleted"));
