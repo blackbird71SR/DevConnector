@@ -5,6 +5,9 @@ import Spinner from "../layout/Spinner";
 import { getProfileById } from "../../actions/profile";
 import { Link } from "react-router-dom";
 
+import ProfileTop from "./ProfileTop";
+import ProfileAbout from "./ProfileAbout";
+
 const Profile = ({
   getProfileById,
   profile: { profile, loading },
@@ -31,6 +34,10 @@ const Profile = ({
                 Edit Profile
               </Link>
             )}
+          <div className="profile-grid my-1">
+            <ProfileTop profile={profile} />
+            <ProfileAbout profile={profile} />
+          </div>
         </Fragment>
       )}
     </Fragment>
@@ -40,6 +47,7 @@ const Profile = ({
 Profile.propTypes = {
   getProfileById: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({
